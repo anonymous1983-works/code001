@@ -1,0 +1,295 @@
+// Webarch Default Theme  
+// --------------------------------------------------
+// Copyright Reserved Revox - 2014
+// --------------------------------------------------
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800);
+// Import Vars
+@import "var.less";
+
+.b-info-lighter {
+  border-color: @color-info-lighter;
+}
+
+//Theme Overwrite
+
+.page-project .page-content-wrapper .jumbotron {
+  background-image: url('@{base-img-url}/project/default/bg/default.jpg');
+  background-size: 100% auto;
+  background-position: 50% 50%;
+  margin: 0px;
+}
+
+.indicateur-list {
+  color: @color-info;
+  * {
+    line-height: 20px;
+  }
+  li {
+    margin-left: 10px;
+    &:first-child {
+      margin-left: 0px;
+      padding-left: 0px;
+    }
+    a {
+      display: block;
+    }
+    span {
+      color: @color-info;
+      font-weight: 700;
+      font-size: 12px;
+    }
+    .fa {
+      color: @color-gray;
+      padding-right: 5px;
+    }
+  }
+  .panel-project & {
+    display: table;
+    width: 100%;
+    li {
+      display: table-cell;
+      float: none;
+      text-align: center;
+      a {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.tag-list {
+  > .title {
+    line-height: 21px;
+    color: @color-info;
+    font-size: 12px;
+    font-weight: 600;
+    padding-right: 10px;
+  }
+  li {
+    line-height: normal;
+    margin-bottom: 3px;
+    .btn-tag {
+      line-height: 16px;
+      padding: 1px 11px;
+      font-size: 11px;
+      border-radius: 11px;
+    }
+    .panel-project & {
+      a {
+        background-color: @color-master-lighter;
+      }
+    }
+  }
+}
+
+.language-list {
+  > .title {
+    line-height: 21px;
+    color: @color-info;
+    font-size: 12px;
+    font-weight: 600;
+    padding-right: 10px;
+  }
+  li {
+    line-height: normal;
+    margin-left: 10px;
+    &:first-child {
+      margin-left: 0px;
+    }
+    .tag-list&{
+      margin-left: 0px;
+    }
+    img {
+      height: 20px;
+    }
+  }
+}
+
+.panel-project {
+  &:hover {
+    //#fbfdff
+    background-color: #f8fcff;
+  }
+  &.project-type-application:hover {
+    background-color: #fff8f9;
+  }
+
+  .panel-heading {
+    border-top: 5px solid@color-library;
+    .project-type-application& {
+      border-top-color: @color-application;
+    }
+    > .container-xs-height {
+      //border-bottom: 1px solid rgba(0, 0, 0, 0.08) ;
+    }
+    .project-thumbnail {
+      width: 82px;
+      .thumbnail-wrapper.bordered {
+        border-color: @color-library;
+        .project-type-application& {
+          border-color: @color-application;
+        }
+      }
+    }
+    .project-write {
+      .title {
+        color: @color-library;
+        border-bottom: 2px solid @color-library;
+        padding-bottom: 10px;
+        .project-type-application& {
+          color: @color-application;
+          border-bottom-color: @color-application;
+        }
+        a {
+          color: @color-library;
+          .project-type-application& {
+            color: @color-application;
+          }
+        }
+      }
+    }
+  }
+  .panel-body {
+    padding-left: 0px;
+    padding-right: 0px;
+    .block-indicateur-list,
+    .block-user,
+    .block-language {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    .block-indicateur-list {
+      padding: 0 0 10px 0;
+    }
+    .block-user {
+      padding: 10px 20px;
+    }
+    .block-tags {
+      padding: 10px 20px;
+      background-color: @color-master-light;
+      border-left: 5px solid @color-library;
+      .project-type-application& {
+        border-left-color: @color-application;
+      }
+
+      .title {
+        width: 83px;
+        display: block;
+        font-size: 12px;
+      }
+    }
+    .block-language {
+      padding-top: 10px;
+    }
+  }
+}
+
+.view-project-content {
+  .project-user-profile .user-profile .thumbnail-wrapper {
+    float: none;
+  }
+  .project-wrap-nav {
+    background-color: @color-success;
+    margin: 0px;
+    .nav.nav-tabs-simple {
+      &:after {
+        border-bottom: 0;
+      }
+      > li {
+        a {
+          color: @color-white;
+          padding-left: 10px;
+          padding-right: 10px;
+          min-width: 0;
+        }
+        &.active a {
+          color: @color-success-darker;
+        }
+        &:after {
+          background-color: @color-success-darker;
+        }
+      }
+
+    }
+    .nav.nav-pills {
+      li {
+        margin: 0px;
+        padding: 0px;
+        a {
+          color: @color-white;
+          line-height: 12px;
+          font-size: 12px;
+          margin: 10px 0;
+          border-right: 1px solid rgba(255, 255, 255, 0.2);
+          &:hover, &:focus {
+            background-color: transparent;
+            color: @color-success-darker;
+          }
+          .fa {
+            padding-right: 10px;
+          }
+        }
+        .btn {
+          margin: 10px 0;
+          .fa {
+            padding-right: 10px;
+          }
+        }
+      }
+    }
+  }
+  .project-wrap-infos {
+    background: @color-white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .language-list.separator {
+      padding-right: 20px;
+      border-right: 1px solid rgba(204, 204, 204, .5);
+    }
+    .language-list.separator + .tag-list {
+      padding-left: 20px;
+      border-left: 1px solid rgba(204, 204, 204, .2);
+    }
+
+  }
+  .project-wrap-body {
+    //background-color: @color-master-lighter;
+    padding: 30px;
+    .project-wrap-sidebar-stats {
+      .panel-heading {
+        padding: 20px 5px 0px 5px;
+        margin-bottom: 10px;
+        &.separator:after {
+          left: 0px;
+          right: 0px;
+        }
+        .panel-controls {
+          margin-top: 4px;
+        }
+      }
+      .stats-infos {
+        border-top: 1px solid @color-master-light;
+        li {
+          border-bottom: 1px solid @color-master-light;
+          margin: 0px;
+          padding: 0px;
+          a {
+            color: @color-info-light;
+            .fa {
+              padding-right: 10px;
+            }
+            .v {
+              float: right;
+            }
+          }
+        }
+      }
+      .stats-workers {
+        .list-unstyled {
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}

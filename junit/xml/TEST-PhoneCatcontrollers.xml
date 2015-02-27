@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+
+  <testsuite name="PhoneCat controllers" errors="2" tests="1" failures="1" time="0.008" timestamp="Wed Feb 18 2015 11:43:01 GMT+0100 (Paris, Madrid)">
+    
+      <testcase assertions="0" classname="PhoneCat controllers" name="encountered a declaration exception" time="0.004">
+        
+          <failure><![CDATA[TypeError: 'undefined' is not a function (evaluating 'this.addMatchers({
+      toEqualData: function(expected) {
+        return angular.equals(this.actual, expected);
+      }
+    })') in file:///C:/Personal_Unsaved/works/d/digicode/workspace/test/unit/controllersSpec.js (line 10)]]></failure>
+        
+          <failure><![CDATA[ReferenceError: Can't find variable: module in file:///C:/Personal_Unsaved/works/d/digicode/workspace/test/unit/controllersSpec.js (line 14)]]></failure>
+        
+      </testcase>
+    
+  </testsuite>
+
+  <testsuite name="directives" errors="0" tests="0" failures="0" time="0.002" timestamp="Wed Feb 18 2015 11:43:01 GMT+0100 (Paris, Madrid)">
+    
+  </testsuite>
+
+  <testsuite name="filter" errors="1" tests="1" failures="1" time="0.005" timestamp="Wed Feb 18 2015 11:43:01 GMT+0100 (Paris, Madrid)">
+    
+      <testcase assertions="0" classname="filter" name="encountered a declaration exception" time="0.001">
+        
+          <failure><![CDATA[ReferenceError: Can't find variable: module in file:///C:/Personal_Unsaved/works/d/digicode/workspace/test/unit/filtersSpec.js (line 7)]]></failure>
+        
+      </testcase>
+    
+  </testsuite>
+
+  <testsuite name="service" errors="1" tests="1" failures="1" time="0.006" timestamp="Wed Feb 18 2015 11:43:01 GMT+0100 (Paris, Madrid)">
+    
+      <testcase assertions="0" classname="service" name="encountered a declaration exception" time="0.002">
+        
+          <failure><![CDATA[ReferenceError: Can't find variable: module in file:///C:/Personal_Unsaved/works/d/digicode/workspace/test/unit/servicesSpec.js (line 6)]]></failure>
+        
+      </testcase>
+    
+  </testsuite>
+
+</testsuites>
