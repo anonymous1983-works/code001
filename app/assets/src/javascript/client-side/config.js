@@ -16,13 +16,12 @@ var DC_Obj = {
         }
     },
 
-
     // Routing
     routing: {
-        default: '/project',
+        default: '/login',
         login: '/login',
         project: '/project',
-        projects: '/projects'
+        projects: '/projects/list'
     },
 
     // path to folder
