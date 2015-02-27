@@ -13,7 +13,7 @@
 //Theme Overwrite
 
 .page-project .page-content-wrapper .jumbotron {
-  background-image: url('@{base-img-url}/project/default/bg/default.jpg');
+  background-image: url('@{base-img-url}project/default/bg/default.jpg');
   background-size: 100% auto;
   background-position: 50% 50%;
   margin: 0px;
@@ -114,9 +114,16 @@
     background-color: #fff8f9;
   }
 
+  .project-type-application &{
+    &:hover{
+      background-color: #fff8f9;
+    }
+  }
+
   .panel-heading {
     border-top: 5px solid@color-library;
-    .project-type-application& {
+    .project-type-application&,
+    .project-type-application &{
       border-top-color: @color-application;
     }
     > .container-xs-height {
@@ -126,7 +133,8 @@
       width: 82px;
       .thumbnail-wrapper.bordered {
         border-color: @color-library;
-        .project-type-application& {
+        .project-type-application&,
+        .project-type-application &{
           border-color: @color-application;
         }
       }
@@ -136,13 +144,15 @@
         color: @color-library;
         border-bottom: 2px solid @color-library;
         padding-bottom: 10px;
-        .project-type-application& {
+        .project-type-application&,
+        .project-type-application &{
           color: @color-application;
           border-bottom-color: @color-application;
         }
         a {
           color: @color-library;
-          .project-type-application& {
+          .project-type-application&,
+          .project-type-application &{
             color: @color-application;
           }
         }
@@ -168,7 +178,8 @@
       padding: 10px 20px;
       background-color: @color-master-light;
       border-left: 5px solid @color-library;
-      .project-type-application& {
+      .project-type-application&,
+      .project-type-application &{
         border-left-color: @color-application;
       }
 

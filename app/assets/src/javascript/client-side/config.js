@@ -32,18 +32,24 @@ var DC_Obj = {
         directives: {
             main: {
                 sidebar: {
-                    src: "templates/views/dgc.sidebar_left.tpl.html",
+                    src: "templates/views/tags/dgc.sidebar_left.tpl.html",
                     log: "Directive sidebarLeft Loaded OK!"
                 },
                 header: {
-                    src: "templates/views/dgc.header.tpl.html",
+                    src: "templates/views/tags/dgc.header.tpl.html",
                     log: "Directive Header Loaded OK!"
                 }
             },
             project: {
                 sidebarStats: {
-                    src: "templates/views/dgc.project_sidebar_stats.tpl.html",
+                    src: "templates/views/tags/dgc.project_sidebar_stats.tpl.html",
                     log: "Directive projectWrapSidebarStats Loaded OK!"
+                },
+                item:{
+                    min:{
+                        src: "templates/views/tags/dgc.project_item_min.tpl.html",
+                        log: "Directive projectItemMin Loaded OK!"
+                    }
                 }
             }
         }

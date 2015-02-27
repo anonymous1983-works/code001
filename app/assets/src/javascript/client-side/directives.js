@@ -34,14 +34,23 @@
 
             }
         }
-    }).directive('projectWrapSidebarStats', function () {
+    }).directive('dgcProjectItemMin', function () {
+        return {
+            restrict: 'AE',
+            templateUrl: _DC_Obj.path.directives.project.item.min.src,
+            link: function (scope, element, attrs) {
+
+                DC_Obj.services.utils.console.info(_DC_Obj.path.directives.project.item.min.log);
+
+            }
+        }
+    }).directive('dcgProjectWrapSidebarStats', function () {
         return {
             restrict: 'AE',
             templateUrl: _DC_Obj.path.directives.project.sidebarStats.src,
             link: function (scope, element, attrs) {
 
                 _DC_Obj.services.utils.console.info(_DC_Obj.path.directives.project.sidebarStats.log);
-
 
                     $('[data-pages="portlet"]').each(function() {
                         var $portlet = $(this)

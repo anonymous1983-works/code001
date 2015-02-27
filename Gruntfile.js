@@ -16,7 +16,7 @@ var G = {
             css: "assets/dev/src/stylesheet/"
         },
         prod: {
-            img: "assets/dev/src/images/",
+            img: "assets/images",
             js: "assets/dev/src/javascript/",
             css: "assets/dev/src/stylesheet/"
         }
@@ -44,7 +44,13 @@ module.exports = function (grunt) {
         less: {
             dev: {
                 options: {
-                    banner: '/* \n  Generates stylesheet file \n  Date : <%= grunt.template.today("yyyy-mm-dd HH:MM") %> \n*/\n'
+                    banner: '/* \n  Generates stylesheet file \n  Date : <%= grunt.template.today("yyyy-mm-dd HH:MM") %> \n*/\n',
+                    compress:true,
+                    cleancss: true,
+                    modifyVars: {
+                        'base-img-url': '"' + G.host + G.paths.prod.img + '"',
+                        bgColor: '#f00'
+                    }
                 },
                 files: {
                     "app/assets/dist/dev/stylesheet/style.css": ["app/assets/src/stylesheet/style.less"]
@@ -52,14 +58,10 @@ module.exports = function (grunt) {
             },
             prod: {
                 options: {
-                    //paths: ["assets/css"],
+                    paths: ["assets/css"],
                     compress: true,
                     cleancss: true,
-                    banner: '/* \n  Generates minified stylesheet file \n  Date : <%= grunt.template.today("yyyy-mm-dd HH:MM") %> \n*/\n',
-                    modifyVars: {
-                        imgPath: '"' + G.host + G.paths.prod.img + '"',
-                        bgColor: '#f00'
-                    }
+                    banner: '/* \n  Generates minified stylesheet file \n  Date : <%= grunt.template.today("yyyy-mm-dd HH:MM") %> \n*/\n'
                 },
                 files: {
                     "app/assets/dist/prod/stylesheet/style.min.css": ["app/assets/src/stylesheet/style.less"]
