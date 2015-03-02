@@ -1,6 +1,6 @@
 var DC_Obj = {
     debug: true,
-    jsonServerUrl:"http://localhost:3000/",
+    jsonServerUrl: "http://localhost:3000/",
 
     // Security
     security: {
@@ -21,7 +21,7 @@ var DC_Obj = {
         default: '/login',
         login: '/login',
         project: '/project',
-        projects: '/projects/list'
+        project_list: '/projects'
     },
 
     // path to folder
@@ -31,23 +31,37 @@ var DC_Obj = {
         directives: {
             main: {
                 sidebar: {
-                    src: "templates/views/tags/dgc.sidebar_left.tpl.html",
+                    src: "tags/dgc.sidebar_left.tpl.html",
                     log: "Directive sidebarLeft Loaded OK!"
                 },
                 header: {
-                    src: "templates/views/tags/dgc.header.tpl.html",
+                    src: "tags/dgc.header.tpl.html",
                     log: "Directive Header Loaded OK!"
                 }
             },
             project: {
                 sidebarStats: {
-                    src: "templates/views/tags/dgc.project_sidebar_stats.tpl.html",
+                    src: "tags/dgc.project_sidebar_stats.tpl.html",
                     log: "Directive projectWrapSidebarStats Loaded OK!"
                 },
-                item:{
-                    min:{
-                        src: "templates/views/tags/dgc.project_item_min.tpl.html",
+                item: {
+                    min: {
+                        src: "tags/dgc.project_item_min.tpl.html",
                         log: "Directive projectItemMin Loaded OK!"
+                    }
+                }
+            }
+        },
+        include: {
+            view: {
+                project:{
+                    item: {
+                        src: "dgc.page_project.tpl.html",
+                        log: "Page project Included OK!"
+                    },
+                    list: {
+                        src: "dgc.page_project_list.tpl.html",
+                        log: "Page project list Included OK!"
                     }
                 }
             }

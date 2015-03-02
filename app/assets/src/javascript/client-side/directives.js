@@ -8,7 +8,7 @@
     _DC_ObjD.dC_ObjDirectives.directive('dgcSidebarLeft', function () {
         return {
             restrict: 'AE',
-            templateUrl: _DC_Obj.path.directives.main.sidebar.src,
+            templateUrl: _DC_Obj.path.views+_DC_Obj.path.directives.main.sidebar.src,
             link: function (scope, element, attrs) {
 
                 DC_Obj.services.utils.console.info(_DC_Obj.path.directives.main.sidebar.log);
@@ -25,7 +25,7 @@
     }).directive('dgcHeader', function () {
         return {
             restrict: 'AE',
-            templateUrl: _DC_Obj.path.directives.main.header.src,
+            templateUrl: _DC_Obj.path.views+_DC_Obj.path.directives.main.header.src,
             link: function (scope, element, attrs) {
 
                 DC_Obj.services.utils.console.info(_DC_Obj.path.directives.main.header.log);
@@ -37,7 +37,7 @@
     }).directive('dgcProjectItemMin', function () {
         return {
             restrict: 'AE',
-            templateUrl: _DC_Obj.path.directives.project.item.min.src,
+            templateUrl: _DC_Obj.path.views+_DC_Obj.path.directives.project.item.min.src,
             link: function (scope, element, attrs) {
 
                 DC_Obj.services.utils.console.info(_DC_Obj.path.directives.project.item.min.log);
@@ -47,7 +47,7 @@
     }).directive('dcgProjectWrapSidebarStats', function () {
         return {
             restrict: 'AE',
-            templateUrl: _DC_Obj.path.directives.project.sidebarStats.src,
+            templateUrl: _DC_Obj.path.views+_DC_Obj.path.directives.project.sidebarStats.src,
             link: function (scope, element, attrs) {
 
                 _DC_Obj.services.utils.console.info(_DC_Obj.path.directives.project.sidebarStats.log);

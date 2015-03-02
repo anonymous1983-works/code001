@@ -4,11 +4,11 @@
 (function (_DC_ObjM, _DC_ObjS) {
 
     $.extend(_DC_ObjS, {
-        "dC_ObjServicesSecurity": _DC_ObjM('dC_ObjServicesSecurity', ['ngResource'])
+        "dC_ObjServicesProject": _DC_ObjM('dC_ObjServicesProject', ['ngResource'])
     });
 
     /* Login */
-    _DC_ObjS.dC_ObjServicesSecurity.factory('DC_Obj.services.security.factory', ['$http',
+    _DC_ObjS.dC_ObjServicesProject.factory('DC_Obj.services.project.factory', ['$http',
         function ($http) {
             var factory = {};
 

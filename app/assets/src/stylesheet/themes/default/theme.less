@@ -10,6 +10,32 @@
   border-color: @color-info-lighter;
 }
 
+//Theme Overwrite Header
+.header {
+  .search-global {
+    display: inline-block;
+    .input-group{
+      margin: 0px;
+      .form-control{
+        width: 300px;
+      }
+    }
+  }
+  > .pull-right{
+    .notification-list{
+      border-right: 0px;
+      padding-right: 0px;
+      li:last-child{
+        padding-left: 0px;
+      }
+      .notification-toggle{
+        right: -26px;
+        left: inherit;
+      }
+    }
+  }
+}
+
 //Theme Overwrite
 
 .page-project .page-content-wrapper .jumbotron {
@@ -96,7 +122,7 @@
     &:first-child {
       margin-left: 0px;
     }
-    .tag-list&{
+    .tag-list& {
       margin-left: 0px;
     }
     img {
@@ -114,8 +140,8 @@
     background-color: #fff8f9;
   }
 
-  .project-type-application &{
-    &:hover{
+  .project-type-application & {
+    &:hover {
       background-color: #fff8f9;
     }
   }
@@ -123,7 +149,7 @@
   .panel-heading {
     border-top: 5px solid@color-library;
     .project-type-application&,
-    .project-type-application &{
+    .project-type-application & {
       border-top-color: @color-application;
     }
     > .container-xs-height {
@@ -134,7 +160,7 @@
       .thumbnail-wrapper.bordered {
         border-color: @color-library;
         .project-type-application&,
-        .project-type-application &{
+        .project-type-application & {
           border-color: @color-application;
         }
       }
@@ -145,14 +171,14 @@
         border-bottom: 2px solid @color-library;
         padding-bottom: 10px;
         .project-type-application&,
-        .project-type-application &{
+        .project-type-application & {
           color: @color-application;
           border-bottom-color: @color-application;
         }
         a {
           color: @color-library;
           .project-type-application&,
-          .project-type-application &{
+          .project-type-application & {
             color: @color-application;
           }
         }
@@ -179,7 +205,7 @@
       background-color: @color-master-light;
       border-left: 5px solid @color-library;
       .project-type-application&,
-      .project-type-application &{
+      .project-type-application & {
         border-left-color: @color-application;
       }
 
@@ -202,7 +228,7 @@
   .project-wrap-nav {
     background-color: @color-success;
     margin: 0px;
-    .nav.nav-tabs-simple {
+    .project-wrap-nav-tabs {
       &:after {
         border-bottom: 0;
       }
@@ -222,7 +248,7 @@
       }
 
     }
-    .nav.nav-pills {
+    .project-wrap-nav-pills {
       li {
         margin: 0px;
         padding: 0px;
@@ -246,6 +272,23 @@
             padding-right: 10px;
           }
         }
+      }
+    }
+    .project-wrap-nav-filter {
+      .types {
+        margin: 5px 4px 0px 4px;
+        .checkbox {
+          margin: 10px;
+          label {
+            margin-bottom: 0px;
+          }
+        }
+      }
+      .order {
+        margin: 7px 4px 0 4px;
+      }
+      .display {
+        margin: 9px 4px 0 4px;
       }
     }
   }

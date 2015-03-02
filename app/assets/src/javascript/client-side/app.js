@@ -14,6 +14,10 @@
             'dC_ObjProvidersSecurity',
             'dC_ObjServicesSecurity',
 
+            'dC_ObjControllersProject',
+            'dC_ObjProvidersProject',
+            'dC_ObjServicesProject',
+
             'dC_ObjControllersTags',
             'dC_ObjProvidersTags',
             'dC_ObjServicesTags',
@@ -35,16 +39,17 @@
             $routeProvider.
                 when(DC_Obj.routing.project, {
                     templateUrl: DC_Obj.path.templates + 'template.tpl.html',
-                    controller: 'DC_Obj.controllers.main'
+                    controller: 'DC_Obj.controllers.project.main'
                 });
             $routeProvider.
-                when(DC_Obj.routing.projects, {
+                when(DC_Obj.routing.project_list, {
                     templateUrl: DC_Obj.path.templates + 'template.tpl.html',
-                    controller: 'DC_Obj.controllers.main'
+                    controller: 'DC_Obj.controllers.project.list'
                 });
             $routeProvider.
                 otherwise({
                     redirectTo: DC_Obj.routing.default
                 });
         }]);
+
 })(window, DC_Obj, DC_Obj.app, DC_Obj.modules);

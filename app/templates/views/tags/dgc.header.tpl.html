@@ -24,18 +24,30 @@
     <!-- END MOBILE CONTROLS -->
     <div class=" pull-left sm-table">
         <div class="header-inner">
-            <div class="brand inline">
+            <div class="brand inline col-middle">
                 <img src="assets/dist/prod/images/common/digicode.logo.blue.svg" alt="logo"
                      data-src="assets/img/logo.png"
                      data-src-retina="assets/img/logo_2x.png" width="78" height="22">
             </div>
-            <!-- BEGIN NOTIFICATION DROPDOWN -->
-            <ul class="notification-list no-margin hidden-sm hidden-xs b-grey b-l b-r no-style p-l-30 p-r-20">
+
+            <div class="search-global col-middle">
+                <div class=" input-group transparent col-md-4 ">
+                    <input type="text" class="form-control" placeholder="Type anywhere to search" id="icon-filter"
+                           name="icon-filter"/>
+                    <span class="input-group-addon "><i class="fa fa-search"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=" pull-right">
+        <div class="header-inner">
+
+            <ul class="notification-list col-middle no-margin hidden-sm hidden-xs b-grey b-l b-r no-style p-l-30 p-r-20">
                 <li class="p-r-15 inline">
                     <div class="dropdown">
                         <a href="javascript:;" id="notification-center" class="icon-set globe-fill"
                            data-toggle="dropdown">
-                            <span class="bubble"></span>
+                            <span class="bubble">4</span>
                         </a>
 
                         <div class="dropdown-menu notification-toggle" role="menu"
@@ -195,28 +207,22 @@
                         </div>
                     </div>
                 </li>
-                <li class="p-r-15 inline">
+                <!--<li class="p-r-15 inline">
                     <a href="#" class="icon-set clip "></a>
                 </li>
                 <li class="p-r-15 inline">
                     <a href="#" class="icon-set grid-box"></a>
+                </li>-->
+                <li class="p-r-15 inline">
+                    <a href="#" class="btn-link icon-set menu-hambuger-plus m-l-20 sm-no-margin hidden-sm hidden-xs"
+                       data-toggle="quickview" data-toggle-element="#quickview"></a>
                 </li>
             </ul>
-            <!-- END NOTIFICATION DROPDOWN -->
-            <a href="#" class="search-link" data-toggle="search"><i class="fa fa-search"></i>Type anywhere
-                to <span
-                        class="bold">search</span></a>
-        </div>
-    </div>
-    <div class=" pull-right">
-        <div class="header-inner">
-            <a href="#" class="btn-link icon-set menu-hambuger-plus m-l-20 sm-no-margin hidden-sm hidden-xs"
-               data-toggle="quickview" data-toggle-element="#quickview"></a>
         </div>
     </div>
     <div class=" pull-right">
         <!-- START User Info-->
-        <div class="visible-lg visible-md m-t-10">
+        <div class="visible-lg visible-md m-t-10 pull-left">
             <div class="pull-left p-r-10 p-t-10 fs-16 font-heading">
                 <span class="semi-bold">David</span> <span class="text-master">Nest</span>
             </div>
