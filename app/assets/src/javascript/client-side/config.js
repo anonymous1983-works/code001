@@ -18,10 +18,11 @@ var DC_Obj = {
 
     // Routing
     routing: {
-        default: '/login',
+        default: '/projects',
         login: '/login',
         project: '/project',
-        project_list: '/projects'
+        project_list: '/projects',
+        dashboard: '/dashboard'
     },
 
     // path to folder
@@ -112,6 +113,16 @@ var DC_Obj = {
                 method: 'GET',
                 url: "http://localhost:3000/siteVisits",
                 headers: {},
+                data: {}
+            }
+        },
+        project: {
+            list: {
+                method: 'GET',
+                url: "http://dev-digicode.intramundi.com/digicode/api/projects",
+                headers: {
+                    'API-TOKEN': 'yRgJTCm8HHKoHEu6KpEq'
+                },
                 data: {}
             }
         }

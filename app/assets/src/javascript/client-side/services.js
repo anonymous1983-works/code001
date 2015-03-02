@@ -57,7 +57,8 @@
 
     /* Services :: Utils */
     $.extend(_DC_ObjS.utils, {
-        "console": {}
+        "console": {},
+        "portlet":{}
     });
 
     /* Services :: Utils :: Console */
@@ -78,6 +79,25 @@
             _log('debug', msg);
         }
 
+    });
+
+    /* Services :: Utils :: Portlet */
+    $.extend(_DC_ObjS.utils.portlet, {
+        "start": function (element) {
+            $(element).portlet({
+                progress: 'circle',
+                progressColor: 'success',
+                refresh: true,
+                onRefresh: function() {
+                    return true;
+                }
+            });
+        },
+        "stop": function(element){
+            $(element).portlet({
+                refresh: false
+            });
+        }
     });
 
     /* Services :: Session */

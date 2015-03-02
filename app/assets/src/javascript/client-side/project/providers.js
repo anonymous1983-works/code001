@@ -12,6 +12,26 @@
         function ($http, $location) {
             var factory = {};
 
+            factory.getAllProjects = function () {
+
+                var req = DC_Obj.request.project.list;
+
+                return $http(req);
+
+                /*return $http(req).success(function (data, status, headers, config) {
+                    // this callback will be called asynchronously
+                    // when the response is available
+                    DC_Obj.services.utils.console.info("Status : " + status);
+                    DC_Obj.services.utils.console.log(data);
+
+                }).error(function (data, status, headers, config) {
+                    // called asynchronously if an error occurs
+                    // or server returns response with an error status.
+                    DC_Obj.services.utils.console.info("Status : " + config);
+
+                });*/
+
+            }
             return factory;
         }]);
 })(DC_Obj, DC_Obj.modules, DC_Obj.providers);

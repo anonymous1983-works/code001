@@ -1,5 +1,5 @@
 <!-- BEGIN SIDEBPANEL-->
-<dgc-sidebar-left class="page-sidebar" data-pages="sidebar" ></dgc-sidebar-left>
+<dgc-sidebar-left class="page-sidebar" data-pages="sidebar"></dgc-sidebar-left>
 <!-- END SIDEBPANEL-->
 
 <div class="view-digicode-container page-container">
@@ -11,7 +11,11 @@
         <div class="page-content-wrapper">
             <!-- START PAGE CONTENT -->
             <div class="content">
-                <ng-include src="view.url"></ng-include>
+                <div id="portlet-advance" class="panel panel-default page-portlet-loader">
+                    <div class="panel-body no-padding no-margin">
+                        <div ng-include="view.url"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
