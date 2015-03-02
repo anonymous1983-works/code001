@@ -23,8 +23,8 @@
             }]);
 
     _DC_ObjC.dC_ObjControllersProject.controller('DC_Obj.controllers.project.list',
-        ['$rootScope', '$scope', '$routeParams', '$http', '$location', 'DC_Obj.providers.project.factory', 'DC_Obj.services.project.factory',
-            function ($rootScope, $scope, $routeParams, $http, $location, DC_ObjProvidersProjectFactory, DC_ObjServicesProjectFactory) {
+        ['$rootScope', '$scope', '$routeParams', '$http', '$location', '$timeout', 'DC_Obj.providers.project.factory', 'DC_Obj.services.project.factory',
+            function ($rootScope, $scope, $routeParams, $http, $location, $timeout, DC_ObjProvidersProjectFactory, DC_ObjServicesProjectFactory) {
 
                 var loader = '.page-portlet-loader';
 
@@ -41,7 +41,19 @@
                 DC_ObjProvidersProjectFactory.getAllProjects().then(
                     function (response) {
                         $scope.controllersproject = response.data;
-                        DC_Obj.services.utils.portlet.stop(loader);
+
+                        $timeout(function () {
+
+                            var container = document.querySelector('#container');
+                            var pckry = new Packery(container, {
+                                // options
+                                itemSelector: '.item',
+                                gutter: 0
+                            });
+
+                            DC_Obj.services.utils.portlet.stop(loader);
+                        }, 100, false);
+
                         return response.data;
                     },
                     function (httpError) {

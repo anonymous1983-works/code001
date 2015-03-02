@@ -40,7 +40,7 @@
             templateUrl: _DC_Obj.path.views+_DC_Obj.path.directives.project.item.min.src,
             link: function (scope, element, attrs) {
 
-                DC_Obj.services.utils.console.info(_DC_Obj.path.directives.project.item.min.log);
+                //DC_Obj.services.utils.console.info(_DC_Obj.path.directives.project.item.min.log);
 
             }
         }
