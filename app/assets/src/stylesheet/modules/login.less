@@ -1,0 +1,100 @@
+/*------------------------------------------------------------------
+[22. Login]
+*/
+
+/*------------------------------------------------------------------
+[22.1 Variables]
+*/
+@login-container-width: 496px;
+
+/*------------------------------------------------------------------
+[22.1 Implementation]
+*/
+body.page-login > .pgn-wrapper[data-position^='top-'] {
+  top: 0px;
+}
+
+.login-wrapper {
+  height: 100%;
+  background-color: @color-primary;
+  & > * {
+    height: 100%;
+  }
+  .bg-pic {
+    position: absolute;
+    overflow: hidden;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: @login-container-width;
+    background-image: url("../images/bg/digicode-bg-03.jpg");
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    & > img {
+      height: 100%;
+      opacity: 0.6;
+    }
+  }
+  .login-container {
+    width: @login-container-width;
+    display: block;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+  }
+  .bg-caption {
+    position: absolute;
+    bottom: 40px;
+    overflow: hidden;
+    width: 100%;
+    height: 140px;
+    background-color: rgba(0, 0, 0, 0.5);
+    .logo {
+      display: block;
+      width: 100%;
+      height: 70px;
+      overflow: hidden;
+      text-indent: -5000px;
+      background-image: url("../images/common/digicode.logo.svg");
+      background-position: 0% 50%;
+      background-repeat: no-repeat;
+      background-size: auto 70px;
+      margin: 35px 0 35px 30px;
+    }
+  }
+}
+
+.register-container {
+  width: 550px;
+  margin: auto;
+  height: 100%;
+}
+
+/* Responsive handlers : Login
+------------------------------------
+*/
+
+@media (max-width: 768px) {
+  .login-wrapper {
+    .bg-pic {
+      background-size: auto 100%;
+    }
+    .login-container {
+      width: 100%;
+    }
+  }
+
+  .register-container {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  .login-wrapper {
+    .login-container {
+      width: 100%;
+    }
+  }
+}

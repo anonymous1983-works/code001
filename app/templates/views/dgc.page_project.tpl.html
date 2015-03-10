@@ -1,0 +1,220 @@
+<div class="view-project-content">
+    <!-- START PROJECT HEADER -->
+    <div class="project-wrap-header">
+        <div class="jumbotron " data-pages="parallax"
+             style="background-image: url(media/project/001/bg/bg.jpg)">
+            <!-- START BREADCRUMB -->
+            <ul class="breadcrumb">
+                <li>Project</li>
+                <li><a href="{{controllersproject.id | dgc_filter_url_project}}" class="active" ng-bind-html="controllersproject.name | dgc_filter_name_project"></a>
+                </li>
+            </ul>
+            <!-- END BREADCRUMB -->
+            <div class="container-fluid container-fixed-lg project-user-profile">
+                <div class="inner">
+
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 ">
+                            <!-- START PANEL -->
+                            <div class="panel panel-transparent text-center">
+                                <div class="panel-heading text-white">
+                                    <div class="panel-title"><h1 class="text-transform-none no-margin" ng-bind-html="controllersproject.name | dgc_filter_name_project">
+                                        </h1>
+                                    </div>
+                                    <p class="panel-description project-description">{{controllersproject.description}}</p>
+                                </div>
+                                <div class="panel-body">
+
+                                    <div class="row">
+                                        <div class="col-md-4 col-md-offset-4">
+                                            <div class="container-xs-height">
+                                                <div class="row-xs-height">
+                                                    <div class="user-profile text-center col-top p-t-20">
+                                                        <a href="" class="block">
+                                                            <div class="thumbnail-wrapper d78 circular bordered b-white bg-avatar" style="{{controllersproject.maintener.avatarPath | dgc_filter_avatar }}"></div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="padding-10">
+                                                        <h4 class="no-margin text-white"><span
+                                                                class="small-text">Created by </span><a href=""
+                                                                                                        class="text-white project-maintener-name" ng-bind-html="controllersproject.maintener.name | dgc_filter_first_word_strong"></a></h4>
+
+                                                        <!--<a href="" class="no-margin text-black link">Show
+                                                            profile</a>-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END PANEL -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END PROJECT HEADER -->
+
+    <!-- START PROJECT NAV-TAB -->
+    <div class="project-wrap-nav container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+                <ul class="project-wrap-nav-tabs nav nav-tabs nav-tabs-simple navbar-left" role="tablist">
+                    <li class="active">
+                        <a href="/#/projects#tabProjectHome" data-toggle="tab" role="tab">Home</a>
+                    </li>
+                    <li>
+                        <a href="/#/projects#tabProjectTicketing" data-toggle="tab"
+                           role="tab">Ticketing</a>
+                    </li>
+                    <li>
+                        <a href="/#/projects#tabProjectWiki" data-toggle="tab" role="tab">Wiki</a>
+                    </li>
+                    <li>
+                        <a href="/#/projects#tabProjectForm" data-toggle="tab" role="tab">Form</a>
+                    </li>
+                    <li>
+                        <a href="/#/projects#tabProjectIssues" data-toggle="tab" role="tab">Issues</a>
+                    </li>
+                    <li>
+                        <a href="/#/projects#tabProjectBlog" data-toggle="tab" role="tab">Blog</a>
+                    </li>
+                </ul>
+                <ul class="project-wrap-nav-pills nav nav-pills navbar-right">
+                    <li><a href=""><i class="fa fa-heart"></i>Add to Favorites</a></li>
+                    <li><a href=""><i class="fa fa-eye"></i>Follow</a></li>
+                    <!--<li>
+                        <button class="btn btn-block btn-info btn-sm" type="button">
+                            <i class="fa fa-code-fork"></i><span class="bold">Join project</span>
+                        </button>
+                    </li>-->
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <!-- END PROJECT NAV-TAB -->
+
+    <!-- START PROJECT INFO -->
+    <div class="project-wrap-infos container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="language-list tag-list list-horizontal">
+                    <li class="title">Language</li>
+                    <li ng-repeat="language in controllersproject.languages"><a class="btn btn-tag btn-tag-dark btn-tag-rounded" href="">{{language}}</a></li>
+                </ul>
+                <ul class="indicateur-list list-horizontal navbar-right">
+                    <li>
+                        <a href=""><i class="fa fa-dashboard"></i><span>4/5</span></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-heart"></i>
+                            <span>80</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-eye"></i><span>128</span></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-bug"></i><span>25</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- END PROJECT INFO -->
+
+    <!-- START PROJECT BODY -->
+    <div class="project-wrap-body container-fluid">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-transparent">
+                    <div class="panel-body no-padding">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading ">
+                                        <h3 ng-bind-html="controllersproject.name | dgc_filter_name_project"></h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <p>{{controllersproject.description}}</p>
+
+                                        <p><img src="media/project/digicode/img/img2.jpg"
+                                                class="image-responsive-height"></p>
+
+                                        <div class="panel panel-default bg-master-lighter">
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="panel-heading ">
+                                                        <h4 class="panel-title">Computer definition</h4>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                            elit. Donec mattis, neque nec pharetra mattis,
+                                                            arcu turpis condimentum elit, ut ultricies sem
+                                                            tortor sed lectus. Cras fringilla augue sed massa
+                                                            porttitor, id commodo nunc aliquam. </p>
+
+                                                        <p>Vivamus in felis ac arcu rhoncus mollis ut aliquet
+                                                            ipsum. Nullam sagittis volutpat tortor, non
+                                                            euismod est dignissim a. Pellentesque sagittis leo
+                                                            et tempus aliquam.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="panel-heading ">
+                                                        <h4 class="panel-title">Computer input</h4>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                            elit. Donec mattis, neque nec pharetra mattis,
+                                                            arcu turpis condimentum elit, ut ultricies sem
+                                                            tortor sed lectus. </p>
+
+                                                        <p>Cras fringilla augue sed massa porttitor, id
+                                                            commodo nunc aliquam.Vivamus in
+                                                            felis ac arcu rhoncus mollis ut aliquet
+                                                            ipsum. Nullam sagittis volutpat tortor, non
+                                                            euismod est dignissim a. Pellentesque sagittis leo
+                                                            et tempus aliquam.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="panel panel-transparent">
+                                    <div class="panel-heading">
+                                        <h5 class="text-transform-none no-margin p-b-10">
+                                            <span class="semi-bold">Last projects</span> of Active Framework</h5>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <dgc-project-item-min class="project-type-application"></dgc-project-item-min>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <dgc-project-item-min></dgc-project-item-min>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <dcg-project-wrap-sidebar-stats
+                                    class="col-md-4 project-wrap-sidebar-stats"></dcg-project-wrap-sidebar-stats>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END PROJECT BODY -->
+</div>

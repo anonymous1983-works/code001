@@ -1,0 +1,5 @@
+{
+  "directory": "digicode-war/src/main/webapp/app/bower_components",
+  "proxy":"http://proxyweb:8080",
+  "strict-ssl": false
+}
